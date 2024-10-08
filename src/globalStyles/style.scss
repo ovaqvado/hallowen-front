@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Eater&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
+// Font face declaration
+@font-face {
+	font-family: 'Piedra';
+	src: url('./fonts/Piedra-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Curse', sans-serif;
+	src: url('./fonts/Gypsy\ Curse.ttf') format('truetype');
+}
+
+// Color Variables
+$primary-color: orange;
+$secondary-color: rgb(46, 46, 46);
+$white: #ffffff;
+$purple: purple;
+$green: green;
+
+// Fonts
+$primary-font: 'Piedra', sans-serif;
+$secondary-font: 'Eater', sans-serif;

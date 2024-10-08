@@ -1,0 +1,41 @@
+@import '/src/globalStyles/style.scss';
+
+.header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	height: 70px;
+	width: 100vw;
+}
+
+.icon {
+	width: 40px;
+	height: 40px;
+	color: $primary-color;
+}
+
+.links {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.link {
+	color: $primary-color;
+	text-decoration: none;
+	font-size: 1.3rem;
+	font-family: $primary-font;
+	transition: 0.3s;
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
+.login {
+	color: $primary-color;
+	font-size: 1.2rem;
+	&:hover {
+		cursor: pointer;
+	}
+}
