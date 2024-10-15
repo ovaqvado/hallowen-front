@@ -1,0 +1,42 @@
+@import '/src/globalStyles/style.scss';
+
+.dropdown {
+	position: relative;
+	cursor: pointer;
+	font-family: $secondary-font;
+	font-size: 1rem;
+}
+
+.menu {
+	position: absolute;
+	list-style-type: none;
+	margin: 5px 0;
+	padding: 0;
+	border: none;
+	width: 150px;
+}
+
+.menu > li {
+	margin: 0;
+	background-color: white;
+}
+
+.menu > li:hover {
+	background-color: lightgray;
+}
+
+.menu_item {
+	border-bottom: 1px solid lightgrey;
+}
+
+.menu > li > button {
+	width: 100%;
+	height: 100%;
+	border: none;
+	text-align: left;
+	background: none;
+	color: inherit;
+	padding: 5px;
+	margin: 0;
+	cursor: pointer;
+}
