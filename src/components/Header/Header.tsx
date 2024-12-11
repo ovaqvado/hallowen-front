@@ -1,26 +1,53 @@
 import { FC } from 'react'
-import { GiPumpkinMask } from 'react-icons/gi'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import useLogin from '../../customHooks/user'
+import { HeaderProps } from '../../types/modal/type'
 import styles from './Header.module.scss'
+// IMG
+import settingsImg from '../../img/settingsImg.svg'
 
-export const Header: FC = () => {
+export const Header: FC<HeaderProps> = ({ openModal }) => {
 	return (
-		<div className={styles.header}>
-			<GiPumpkinMask className={styles.icon} />
+		<nav className={styles.header}>
+			<p>Blog</p>
 			<div className={styles.links}>
-				<Link className={styles.link} to='/'>
+				<NavLink
+					className={({ isActive }) =>
+						isActive ? `${styles.link} ${styles.active}` : styles.link
+					}
+					to='/'
+				>
 					Home
-				</Link>
-				<Link className={styles.link} to='/blog'>
+				</NavLink>
+
+				<NavLink
+					className={({ isActive }) =>
+						isActive ? `${styles.link} ${styles.active}` : styles.link
+					}
+					to='/blog'
+				>
 					Blog
-				</Link>
-				<Link className={styles.link} to='/profile'>
+				</NavLink>
+				<NavLink
+					className={({ isActive }) =>
+						isActive ? `${styles.link} ${styles.active}` : styles.link
+					}
+					to='/profile'
+				>
 					Profile
-				</Link>
+				</NavLink>
 			</div>
-			<div className={styles.auth_about}>
-				<div className={styles.login}>login/logout</div>
+			<div className={styles.auth_buttons}>
+				{useLogin ? (
+					<button onClick={openModal} className={styles.login}>
+						Sign In / Sign Up
+					</button>
+				) : (
+					<button className={styles.settings_btn} onClick={openModal}>
+						<img className={styles.settings_img} src={settingsImg} alt='' />
+					</button>
+				)}
 			</div>
-		</div>
+		</nav>
 	)
 }

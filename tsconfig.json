@@ -1,7 +1,14 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+	"compilerOptions": {
+		"baseUrl": "./",
+		"paths": {
+			"@components/*": ["src/app/components/*"],
+			"@img/*": ["./src/img/*"] // Add this line for image alias
+		}
+	},
+	"files": [],
+	"references": [
+		{ "path": "./tsconfig.app.json" },
+		{ "path": "./tsconfig.node.json" }
+	]
 }
